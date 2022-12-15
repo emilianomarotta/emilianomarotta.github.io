@@ -33,6 +33,16 @@ body {
 	line-height: 1;
 }
 
+.btn {
+		background: none;
+        border: 0px;
+		height:20px;
+		width:30px;
+		padding: 0;
+		border: none;
+
+    }
+
 ol, ul {
 	list-style: none;
 }

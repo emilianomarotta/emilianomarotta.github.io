@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+Header set Access-Control-Allow-Origin "*"
 <html>
 	<head>
 		<title>Emiliano Marotta Website</title>
@@ -15,16 +11,13 @@
 
 		<!-- Header -->
 			<div id="header">
-
 				<div class="top">
-
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
 							<h1 id="title">Emiliano Marotta</h1>
-							<p>Bachelor of Systems Student</p>
+							<p id="estudios">Bachelor of Systems Student</p>
 						</div>
-
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
@@ -32,13 +25,16 @@
 								<li><a href="#experience" id="experience-link"><span class="icon solid fa-th">Experience</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+								
 							</ul>
+							<div align="center">
+								<button class="btn" onclick="cambiarIdioma('es')"></a> <img src="images/spain.png" alt=""></button>&nbsp&nbsp
+								<button class="btn" onclick="cambiarIdioma('en')"></a> <img src="images/uk.png" alt=""></button>
+							</div>
 						</nav>
-
 				</div>
-
+				
 				<div class="bottom">
-
 					<!-- Social Icons -->
 						<ul class="icons">
 							<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
@@ -47,37 +43,30 @@
 							<li><a href="https://www.linkedin.com/in/emiliano-marotta-iriarte-8a8a48155/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<!--<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>-->
 						</ul>
-
-				</div>
-
+				</div>				
 			</div>
 
 		<!-- Main -->
 			<div id="main">
-
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container">
-
 							<header>
-								<h2 class="alt">Hi there!, I am currently in my second year of a Bachelor's Degree in Systems at ORT University</h2>
-								<p>I am eager to learn and gain experience in the field of computer science,
+								<h2 id="introduccion" class="alt">Hi there!, I am currently in my second year of a Bachelor's Degree in Systems at ORT University</h2>
+								<p id="subintroduccion">I am eager to learn and gain experience in the field of computer science,
 									and I am excited to see where my studies and future career will take me.
-									Thank you for taking the time to read my introduction..</p>
-							</header>							
-
+									Thank you for taking the time to read my introduction.</p>
+							</header>
 						</div>
 					</section>
 
 				<!-- Experience -->
 					<section id="experience" class="two">
 						<div class="container">
-
 							<header>
-								<h2>Experience</h2>
+								<h2 id="experien">Experience</h2>
 							</header>
-
-							<p>In the previous years, I have worked with geographic information systems,
+							<p id="desc-experiencia">In the previous years, I have worked with geographic information systems,
 								which has allowed me to acquire knowledge in many areas,
 								as well as develop scripts in Python and Java to automate tasks.
 								This experience has been very valuable to me, and I have learned a lot from it.
@@ -89,11 +78,10 @@
 										<a href="https://www.gub.uy/infraestructura-datos-espaciales/" target="_blank" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
 										<header>
 											<h2> IDEuy</h2>
-											<h3> <b> December 2018 - Present </b> </h3>										
-											<h1>Advanced management of geographic information systems
+											<h3 id="exp-ide"> <b> December 2018 - Present </b> </h3>										
+											<h1 id="desc-ide">Advanced management of geographic information systems
 												Script development in java and python</h1>
-											</header>
-										
+											</header>										
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
@@ -101,8 +89,8 @@
 										<a href="https://uy.linkedin.com/company/2000-aviation" target="_blank" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 										<header>			
 											<h2>2000Aviation</h2>
-											<h3>July 2016 - December 2018</h3>
-											<h1>I have learned how to manage virtual machines and servers.
+											<h3 id="exp-2000av">July 2016 - December 2018</h3>
+											<h1 id="desc-2000av">I have learned how to manage virtual machines and servers.
 												I have also developed scripts in Java</h1>
 											</header>
 									</article>
@@ -117,20 +105,20 @@
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2 id="acerca">About Me</h2>
 							</header>
 
 							<!--<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>-->
 
-							<p>Currently, I am in my third semester of a Bachelor's degree in Systems at ORT University.
+							<p id="acerca-desc">Currently, I am in my third semester of a Bachelor's degree in Systems at ORT University.
 								I am passionate about technology and I am looking to specialize in this field.
 								I am grateful for the opportunities that this university has provided me,
 								and I am looking forward to continuing to grow and develop my skills as a systems engineer.</p>
 
 							<footer>
-								<a href="https://drive.google.com/file/d/1VYtf5pgteDamQKZMUZBD0V-ropX69wLb/view?usp=share_link" target="_blank" class="button scrolly">Scholarship</a>
+								<a id="escolaridad" href="https://drive.google.com/file/d/1Cpo7SRDhjtA2PUbNuPpeBS-o9RB51ipf/view?usp=share_link" target="_blank" class="button scrolly">Scholarship</a>
 								&nbsp&nbsp&nbsp
-								<a href="https://drive.google.com/file/d/1O1HTQHNkNkNRBkFUssi12gBihCvvNcwC/view?usp=sharing" target="_blank" class="button scrolly">Resume</a>
+								<a id="cv" href="https://drive.google.com/file/d/1O1HTQHNkNkNRBkFUssi12gBihCvvNcwC/view?usp=sharing" target="_blank" class="button scrolly">Resume</a>
 							</footer>
 
 						</div>
@@ -141,17 +129,17 @@
 						<div class="container">
 
 							<header>
-								<h2>Contact</h2>
+								<h2 id="contacto">Contact</h2>
 							</header>
 
-							<p>If you would like to get in touch with me or leave me a message, you can do so below.
+							<p id="cotnact-desc">If you would like to get in touch with me or leave me a message, you can do so below.
 								I will be happy to hear from you and answer any questions that you may have.
 								Thank you for considering me, and I look forward to hearing from you.</p>
 
 							<h1 style="font-weight: bold"  class="icon solid fa-envelope">&nbspEmail</h1>
 							<p>emilianomarott@gmail.com</p>
 
-							<h1 style="font-weight: bold" class="icon solid fa-phone">&nbspPhone</h1>
+							<h1 id="phone" style="font-weight: bold" class="icon solid fa-phone">&nbspPhone</h1>
 							<p>(+598) 098 824 617</p>
 						</div>
 					</section>
@@ -170,12 +158,26 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				function cambiarIdioma(idioma) {
+				  // cargamos las traducciones desde el archivo JSON
+				  $.ajax({
+					url: 'traducciones.json',
+					dataType: 'json',
+					success: function(data) {
+					  // cambiamos el contenido de la página utilizando las traducciones
+					  $('#introduccion').text(data[idioma].introduccion);
+					  $('#subintroduccion').text(data[idioma].subintroduccion);
+					}
+				  });
+				}
+			  </script>
 	</body>
 </html>
