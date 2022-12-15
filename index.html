@@ -172,8 +172,25 @@
 					dataType: 'json',
 					success: function(data) {
 					  // cambiamos el contenido de la página utilizando las traducciones
+					  $('#estudios').text(data[idioma].estudios);
+					  $('#experience-link').text(data[idioma].experience-link);
+					  $('#about-link').text(data[idioma].about-link);
+					  $('#contact-link').text(data[idioma].contact-link);
 					  $('#introduccion').text(data[idioma].introduccion);
 					  $('#subintroduccion').text(data[idioma].subintroduccion);
+					  $('#experien').text(data[idioma].experien);
+					  $('#desc-experiencia').text(data[idioma].desc-experiencia);
+					  $('#exp-ide').text(data[idioma].exp-ide);
+					  $('#desc-ide').text(data[idioma].desc-ide);
+					  $('#exp-2000av').text(data[idioma].exp-2000av);
+					  $('#desc-2000av').text(data[idioma].desc-2000av);
+					  $('#acerca').text(data[idioma].acerca);
+					  $('#acerca-desc').text(data[idioma].acerca-desc);
+					  $('#escolaridad').text(data[idioma].escolaridad);
+					  $('#cv').text(data[idioma].cv);
+					  $('#contacto').text(data[idioma].contacto);
+					  $('#cotnact-desc').text(data[idioma].cotnact-desc);
+					  $('#phone').text(data[idioma].phone);
 					}
 				  });
 				}
