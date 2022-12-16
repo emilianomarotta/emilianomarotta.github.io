@@ -166,6 +166,7 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				function cambiarIdioma(idioma) {
+					location.reload(true);
 				  // cargamos las traducciones desde el archivo JSON
 				  $.ajax({
 					url: 'traducciones.json',
