@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<html lang="en"></html>
 <html>
 	<head>
 		<title>Emiliano Marotta Website</title>
@@ -21,9 +22,9 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#experience" id="experience-link"><span class="icon solid fa-th">Experience</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+								<li><a href="#experience"><span id="experience-link" class="icon solid fa-th">Experience</span></a></li>
+								<li><a href="#about" ><span id="about-link" class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" ><span id="contact-link" class="icon solid fa-envelope">Contact</span></a></li>
 								
 							</ul>
 							<div align="center">
@@ -131,7 +132,7 @@
 								<h2 id="contacto">Contact</h2>
 							</header>
 
-							<p id="cotnact-desc">If you would like to get in touch with me or leave me a message, you can do so below.
+							<p id="contact-desc">If you would like to get in touch with me or leave me a message, you can do so below.
 								I will be happy to hear from you and answer any questions that you may have.
 								Thank you for considering me, and I look forward to hearing from you.</p>
 
@@ -164,37 +165,58 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
+			  <script>
 				function cambiarIdioma(idioma) {
-					location.reload(true);
-				  // cargamos las traducciones desde el archivo JSON
-				  $.ajax({
-					url: 'traducciones.json',
-					dataType: 'json',
-					success: function(data) {
-					  // cambiamos el contenido de la página utilizando las traducciones
-					  $('#estudios').text(data[idioma].estudios);
-					  $('#experience-link').text(data[idioma].experience-link);
-					  $('#about-link').text(data[idioma].about-link);
-					  $('#contact-link').text(data[idioma].contact-link);
-					  $('#introduccion').text(data[idioma].introduccion);
-					  $('#subintroduccion').text(data[idioma].subintroduccion);
-					  $('#experien').text(data[idioma].experien);
-					  $('#desc-experiencia').text(data[idioma].desc-experiencia);
-					  $('#exp-ide').text(data[idioma].exp-ide);
-					  $('#desc-ide').text(data[idioma].desc-ide);
-					  $('#exp-2000').text(data[idioma].exp-2000);
-					  $('#desc-2000').text(data[idioma].desc-2000);
-					  $('#acerca').text(data[idioma].acerca);
-					  $('#acerca-desc').text(data[idioma].acerca-desc);
-					  $('#escolaridad').text(data[idioma].escolaridad);
-					  $('#cv').text(data[idioma].cv);
-					  $('#contacto').text(data[idioma].contacto);
-					  $('#cotnact-desc').text(data[idioma].cotnact-desc);
-					  $('#phone').text(data[idioma].phone)
-					}
-				  });
+				  // Establece el idioma de la página
+				  document.querySelector('html').lang = idioma;
+				  // Cambia el contenido de las etiquetas
+				  if (idioma === 'es') {
+					document.querySelector('#estudios').textContent = 'Estudiante de Lic. en Sistemas';
+					document.querySelector('#experience-link').innerHTML  = 'Experiencia';
+					document.querySelector('#about-link').innerHTML  = 'Acerca de mí';
+					document.querySelector('#contact-link').innerHTML  = 'Contacto';
+					document.querySelector('#introduccion').textContent = '¡Hola!, Actualmente estoy en mi segundo año de la Licenciatura en Sistemas en la Universidad ORT.';
+					document.querySelector('#subintroduccion').textContent = 'Estoy ansioso por aprender y ganar experiencia en el campo de la informática, y ver a dónde me llevarán mis estudios y mi futura carrera. Gracias por tomarse el tiempo de leer mi introducción.';
+					document.querySelector('#experien').textContent = 'Experiencia';
+					document.querySelector('#desc-experiencia').textContent = 'En los años anteriores, he trabajado con sistemas de información geográfica, lo que me ha permitido adquirir conocimientos en muchas áreas, así como desarrollar scripts en Python y Java para automatizar tareas. Esta experiencia ha sido muy valiosa para mí y he aprendido mucho de ella. Confío en que las habilidades y el conocimiento que he adquirido serán útiles en mi futura carrera.';
+					document.querySelector('#exp-ide').textContent = 'Diciembre 2018 - Presente';
+					document.querySelector('#desc-ide').textContent = 'Manejo avanzado en sistemas de información geográfica. Desarrollo de Scripts en Java y Python.';
+					document.querySelector('#exp-2000').textContent = 'Julio 2016 - Diciembre 2018';
+					document.querySelector('#desc-2000').textContent = 'He aprendido a gestionar máquinas virtuales y servidores. También he desarrollado scripts en Java';
+					document.querySelector('#acerca').textContent = 'Acerca de mí';
+					document.querySelector('#acerca-desc').textContent = 'Actualmente, estoy en mi tercer semestre de la licenciatura en Sistemas en la Universidad ORT. Soy un apasionado de la tecnología y busco especializarme en este campo. Estoy agradecido por las oportunidades que esta universidad me ha brindado, y espero seguir creciendo y desarrollando mis habilidades como ingeniero de sistemas.';
+					document.querySelector('#escolaridad').textContent = 'Escolaridad';
+					document.querySelector('#cv').textContent = 'CV';
+					document.querySelector('#contacto').textContent = 'Contacto';
+					document.querySelector('#contact-desc').textContent = 'Si desea ponerse en contacto conmigo o dejarme un mensaje, puede hacerlo a continuación. Estaré encantado de saber de usted y responder a cualquier pregunta que pueda tener. Gracias por considerarme, y tengo ganas de tener noticias de usted.';
+					document.querySelector('#phone').textContent = ' Teléfono';
+					
+					document.querySelector('#introduccion').textContent = '¡Hola!, Actualmente estoy en mi segundo año de la Licenciatura en Sistemas en la Universidad ORT.';
+					document.querySelector('#parrafo').textContent = 'Este es mi sitio web';
+				  } else {
+					document.querySelector('#estudios').textContent = 'Bachelor of Systems Student';
+					document.querySelector('#experience-link').textContent = 'Experience';
+					document.querySelector('#about-link').textContent = 'About Me';
+					document.querySelector('#contact-link').textContent = 'Contact';
+					document.querySelector('#introduccion').textContent = 'Hi there!, I am currently in my second year of a Bachelor\'s Degree in Systems at ORT University.';
+					document.querySelector('#subintroduccion').textContent = 'I am eager to learn and gain experience in the field of computer science, and I am excited to see where my studies and future career will take me. Thank you for taking the time to read my introduction.';
+					document.querySelector('#experien').textContent = 'Experience';
+					document.querySelector('#desc-experiencia').textContent = 'In the previous years, I have worked with geographic information systems, which has allowed me to acquire knowledge in many areas, as well as develop scripts in Python and Java to automate tasks. This experience has been very valuable to me, and I have learned a lot from it. I am confident that the skills and knowledge that I have gained will be useful in my future career';
+					document.querySelector('#exp-ide').textContent = 'December 2018 - Present';
+					document.querySelector('#desc-ide').textContent = 'Advanced management of geographic information systems Script development in java and python';
+					document.querySelector('#exp-2000').textContent = 'July 2016 - December 2018';
+					document.querySelector('#desc-2000').textContent = 'I have learned how to manage virtual machines and servers. I have also developed scripts in Java';
+					document.querySelector('#acerca').textContent = 'About Me';
+					document.querySelector('#acerca-desc').textContent = 'Currently, I am in my third semester of a Bachelor\'s degree in Systems at ORT University. I am passionate about technology and I am looking to specialize in this field. I am grateful for the opportunities that this university has provided me, and I am looking forward to continuing to grow and develop my skills as a systems engineer.';
+					document.querySelector('#escolaridad').textContent = 'Scholarship';
+					document.querySelector('#cv').textContent = 'Resume';
+					document.querySelector('#contacto').textContent = 'Contact';
+					document.querySelector('#contact-desc').textContent = 'If you would like to get in touch with me or leave me a message, you can do so below. I will be happy to hear from you and answer any questions that you may have. Thank you for considering me, and I look forward to hearing from you.';
+					document.querySelector('#phone').textContent = ' Phone';
+				  }
 				}
 			  </script>
+
+			  
 	</body>
 </html>
